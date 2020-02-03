@@ -68,18 +68,6 @@ class ComplexLineComparator implements Comparator<String> {
     public int compare(String o1, String o2) {
         String[] line1 = o1.split("\\s+");
         String[] line2 = o2.split("\\s+");
-        for (String s : line1)
-            if (NumberUtils.isParsable(s))
-                System.out.print(s + "#|");
-            else
-                System.out.print(s + "|");
-        System.out.println();
-        for (String s : line2)
-            if (NumberUtils.isParsable(s))
-                System.out.print(s + "#|");
-            else
-                System.out.print(s + "|");
-        System.out.println("\n");
 
         for (int i = 0; i < Math.min(line1.length, line2.length); i++) {
             if (line1[i].equals(line2[i]))
